@@ -13,12 +13,11 @@ pipeline {
 
         stage ('Executing sql file') {
             steps {
-                withEnv(['PATH+EXTRA=/usr/bin']) {
+                
                     dir('sql-files'){
-                    	sh 'chmod +x execute-sql-files.sh'
-                        sh './execute-sql-files.sh'
+                    	sh '~/usr/bin mssql-cli -S laboratorio-tcm.database.windows.net -U administrador -P Laboratorio1 -d TutorialDB -i sql-query.sql -o file-output.txt'
                 	}
-            	}
+            	
         	}
         }
 
