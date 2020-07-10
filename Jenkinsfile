@@ -15,6 +15,7 @@ pipeline {
             steps {
                 withEnv(['PATH+EXTRA=/usr/bin']) {
                     dir('sql-files'){
+                    	sh 'chmod +x execute-sql-files.sh'
                         sh './execute-sql-files.sh'
                 }
             }
