@@ -15,11 +15,11 @@ pipeline {
             steps {
                 
                     dir('sql-files'){
-                        sh ''''#!/bin/bash'
-                    	         cat sql-query.sql
-                    	         pwd
+                        sh '''export PATH=/bin/bash:$PATH
+                    	      cat sql-query.sql
+                    	      pwd
                     	
-                                mssql-cli -S laboratorio-tcm.database.windows.net -U administrador -P Laboratorio1 -d TutorialDB -i sql-query.sql -o file-output.txt
+                              mssql-cli -S laboratorio-tcm.database.windows.net -U administrador -P Laboratorio1 -d TutorialDB -i sql-query.sql -o file-output.txt
                         '''
                 	}
             	
