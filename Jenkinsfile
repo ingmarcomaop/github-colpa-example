@@ -22,6 +22,7 @@ pipeline {
                               cd /usr/bin
                               pwd
                               ls
+                              whoami
                               which mssql-cli
                               
                               
