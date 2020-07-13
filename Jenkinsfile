@@ -15,7 +15,7 @@ pipeline {
             steps {
                 
                     dir('sql-files'){
-                        bash ''''#!/bin/bash'
+                        sh ''''#!/bin/bash'
                     	         cat sql-query.sql
                     	         pwd
                     	
