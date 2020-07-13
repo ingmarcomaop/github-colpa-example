@@ -22,6 +22,7 @@ pipeline {
                               cd /usr/bin
                               pwd
                               ls
+                              whereis mssql-cli
                               which mssql-cli
                               locate mssql-cli
                     	
